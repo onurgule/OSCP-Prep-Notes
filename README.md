@@ -11,7 +11,13 @@ gobuster dir -u http://192.168.174.101/ -w /usr/share/wordlists/dirbuster/direct
 
 #-b 404 -s 201 # status code özelleştirme
 
+## BOF
 
+!mona config -set workingfolder c:\mona\%p
+
+!mona bytearray -b "\x00"
+
+!mona compare -f C:\mona\<PATH>\bytearray.bin -a <ESP_ADDRESS/EBX_ADDRESS>
 
 
 ## Privilege Escalation
