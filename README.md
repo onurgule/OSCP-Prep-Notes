@@ -43,3 +43,13 @@ msf-pattern_offset -q 413461A2 -l 5000
 wget "https://github.com/carlospolop/PEASS-ng/releases/latest/download/linpeas.sh" -O linpeas.sh
 
 sudo -l
+
+## Active Directory
+
+net user # Enumerate all of the local accounts.
+
+net user /domain # Enumerate all users in the entire domain.
+
+net user admin_onur /domain # Enumerate spesific 'admin_onur' user in the domain.
+
+net group /domain # Enumerate all the groups in the domain.
